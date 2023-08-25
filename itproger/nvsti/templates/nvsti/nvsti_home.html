@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Последние обновления</h1>
+        {% if nvsti %}
+            {% for el in nvsti %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title_nv }}</h3>
+                    <p>{{ el.anons_nv }}</p>
+                    <a href="{% url 'nvsti-detailnv' el.id %}" class="btn btn-warning">Читать полностью</a>
+                </div>
+            {% endfor%}
+        {% else %}
+            <p>Нет новых обновлений</p>
+        {% endif %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ novost.title_nv }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ novost.title_nv }}</h1>
+        <p>{{ novost.date_nv }}</p>
+        <p>{{ novost.full_text_nv }}</p>
+    </div>
+{% endblock %}
